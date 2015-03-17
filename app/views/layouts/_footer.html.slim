@@ -1,0 +1,12 @@
+footer.footer
+  small
+    a> href="http://railstutorial.jp/" Rails Tutorial
+    | by Michael Hartl
+  nav
+    ul
+      - [:about, :contact, :news].each do |page|
+        li
+          - if page == :news
+            a href="http://news.railstutorial.jp/" #{page.capitalize}
+          - else
+            = link_to page.capitalize, send("#{page}_path")

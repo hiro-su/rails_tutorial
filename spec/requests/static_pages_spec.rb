@@ -1,65 +1,40 @@
 require 'rails_helper'
 
 RSpec.describe "StaticPages", type: :request do
-  let(:title) { "Ruby on Rails Tutorial Sample App" }
+  subject { page }
 
   describe "GET /static_pages/home" do
-    before do
-      visit '/static_pages/home'
-    end
+    before { visit root_path }
 
-    it "should have the content 'Sample App'" do
-      expect(page).to have_content('Sample App')
-    end
-
-    it "should have the right title" do
-      expect(page).to have_title(title)
-    end
-
-    it "should not have a custom page title" do
-      expect(page).not_to have_title('| Home')
-    end
+    it { should have_content('Sample App') }
+    it { should have_title(full_title('')) }
+    it { should_not have_title('| Home') }
   end
 
   describe "GET /static_pages/help" do
     before do
-      visit '/static_pages/help'
+      visit help_path
     end
 
-    it "should have the content 'Help'" do
-      expect(page).to have_content('Help')
-    end
-
-    it "should have the right title" do
-      expect(page).to have_title("#{title} | Help")
-    end
+    it { should have_content('Help') }
+    it { should have_title(full_title('Help')) }
   end
 
   describe "GET /static_pages/about" do
     before do
-      visit '/static_pages/about'
+      visit about_path
     end
 
-    it "should have the content 'About us'" do
-      expect(page).to have_content('About Us')
-    end
-
-    it "should have the right title" do
-      expect(page).to have_title("#{title} | About")
-    end
+    it { should have_content('About Us') }
+    it { should have_title(full_title('About')) }
   end
 
   describe "GET /static_pages/contact" do
     before do
-      visit '/static_pages/contact'
+      visit contact_path
     end
 
-    it "should have the contact 'Contact'" do
-      expect(page).to have_content('Contact')
-    end
-
-    it "should have the right title" do
-      expect(page).to have_title("#{title} | Contact")
-    end
+    it { should have_content('Contact') }
+    it { should have_title(full_title('Contact')) }
   end
 end

@@ -1,0 +1,10 @@
+header class="navbar navbar-fixed-top navbar-inverse"
+  div.navbar-inner
+    div.container
+      = link_to 'sample app', '#', id: 'logo'
+      nav
+        ul class="nav navbar-nav pull-right"
+          - ["home", "help", "sign in"].each do |page|
+            - if page == "home"
+              - title, page = page.capitalize, "root"
+            li = link_to (title ? title : page.capitalize), send("#{page.split.join}_path")
