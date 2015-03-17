@@ -53,3 +53,5 @@ group :test do
   gem 'selenium-webdriver'
   gem 'capybara'
 end
+
+gem 'slim-rails'
