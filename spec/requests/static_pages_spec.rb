@@ -13,8 +13,11 @@ RSpec.describe "StaticPages", type: :request do
     end
 
     it "should have the right title" do
-      visit '/static_pages/home'
-      expect(page).to have_title("#{title} | Home")
+      expect(page).to have_title(title)
+    end
+
+    it "should not have a custom page title" do
+      expect(page).not_to have_title('| Home')
     end
   end
 
@@ -43,6 +46,20 @@ RSpec.describe "StaticPages", type: :request do
 
     it "should have the right title" do
       expect(page).to have_title("#{title} | About")
+    end
+  end
+
+  describe "GET /static_pages/contact" do
+    before do
+      visit '/static_pages/contact'
+    end
+
+    it "should have the contact 'Contact'" do
+      expect(page).to have_content('Contact')
+    end
+
+    it "should have the right title" do
+      expect(page).to have_title("#{title} | Contact")
     end
   end
 end
