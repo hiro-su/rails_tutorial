@@ -40,7 +40,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'hirb'
   gem 'hirb-unicode'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.2.1'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
@@ -55,8 +55,8 @@ end
 
 group :test do
   gem 'selenium-webdriver'
-  gem 'capybara'
+  gem 'capybara', '~> 2.4.4'
 end
 
-gem 'slim-rails'
-gem 'bootstrap-sass'
+gem 'slim-rails', '~> 3.0.1'
+gem 'bootstrap-sass', '~> 3.2.0'

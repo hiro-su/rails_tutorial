@@ -251,9 +251,9 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
-  bootstrap-sass
+  bootstrap-sass (~> 3.2.0)
   byebug
-  capybara
+  capybara (~> 2.4.4)
   coffee-rails (~> 4.1.0)
   guard
   guard-rspec
@@ -265,11 +265,11 @@ DEPENDENCIES
   pry-byebug
   pry-rails
   rails (= 4.2.0)
-  rspec-rails
+  rspec-rails (~> 3.2.1)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   selenium-webdriver
-  slim-rails
+  slim-rails (~> 3.0.1)
   spring
   sqlite3
   turbolinks
