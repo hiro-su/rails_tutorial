@@ -70,6 +70,11 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.4.0)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.5.0)
+      factory_girl (~> 4.5.0)
+      railties (>= 3.0.0)
     ffi (1.9.8)
     formatador (0.2.5)
     globalid (0.3.3)
@@ -255,6 +260,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.4.4)
   coffee-rails (~> 4.1.0)
+  factory_girl_rails (~> 4.5.0)
   guard
   guard-rspec
   hirb
@@ -268,7 +274,7 @@ DEPENDENCIES
   rspec-rails (~> 3.2.1)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
-  selenium-webdriver
+  selenium-webdriver (~> 2.45.0)
   slim-rails (~> 3.0.1)
   spring
   sqlite3

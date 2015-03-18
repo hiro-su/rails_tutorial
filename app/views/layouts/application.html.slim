@@ -13,3 +13,5 @@ html
     div.container
       = yield
       = render 'layouts/footer'
+      - if Rails.env.development?
+        = debug(params)

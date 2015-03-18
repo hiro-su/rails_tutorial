@@ -54,8 +54,9 @@ group :development, :test do
 end
 
 group :test do
-  gem 'selenium-webdriver'
+  gem 'selenium-webdriver', '~> 2.45.0'
   gem 'capybara', '~> 2.4.4'
+  gem 'factory_girl_rails', '~> 4.5.0'
 end
 
 gem 'slim-rails', '~> 3.0.1'
