@@ -13,6 +13,7 @@ html
     div.container
       - flash.each do |key, value|
         = content_tag :div, value, class: "alert alert-#{key}"
+
       = yield
       = render 'layouts/footer'
       - if Rails.env.development?
