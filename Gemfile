@@ -57,6 +57,8 @@ group :test do
   gem 'selenium-webdriver', '~> 2.45.0'
   gem 'capybara', '~> 2.4.4'
   gem 'factory_girl_rails', '~> 4.5.0'
+  gem 'cucumber-rails', '1.4.0', require: false
+  gem 'database_cleaner', github: 'bmabey/database_cleaner'
 end
 
 gem 'slim-rails', '~> 3.0.1'
